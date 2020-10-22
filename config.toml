@@ -1,0 +1,16 @@
+[listen]
+ssl = false
+cert = "wildcard_certificate"
+key = "wildcard_key"
+port = 8888
+
+[ldap]
+useLdap = true
+host = "x.x.x.x"
+port = 389
+base = "dc=r=xxxx,dc=com"
+binddn = "cn=admin,dc=xxxx,dc=com"
+bindpassword = "xxxxx"
+
+[upload]
+path = './'
