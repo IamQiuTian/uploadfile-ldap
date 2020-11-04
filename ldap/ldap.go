@@ -12,7 +12,7 @@ func LDAPAuthUser(username string, password string) bool {
 	bindusername := g.Config.LDAP.BindDN
 	bindpassword := g.Config.LDAP.BindPassword
 
-	l, err := ldap.Dial("tcp", fmt.Sprintf("%s:%d", "10.42.159.107", 389))
+	l, err := ldap.Dial("tcp", fmt.Sprintf("%s:%d", g.Config.LDAP.Host, 389))
 	if err != nil {
 		log.Fatal(err)
 	}
